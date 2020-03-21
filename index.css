@@ -13,7 +13,7 @@ body{
     font-family: 'Flamenco', cursive; 
 }
 header{
-    background:linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.6)),url("https://images.pexels.com/photos/818650/pexels-photo-818650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat;
+    background:linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.6)),url("https://cdn.wallpaperhi.com/1280x1024/20120204/jump%20basketball%20arms%20raised%201280x1024%20wallpaper_www.wallpaperhi.com_15.jpg") no-repeat;
     background-size:cover;
     height:100vh;
     background-position: center;
@@ -56,8 +56,8 @@ header{
     padding:50x 0;
 }
 .main-nav li a:hover{
-    border-bottom: 1px solid #bf55ec;
-    border-width: 3px;
+    color: aqua;
+    font-weight: bolder;
 }
 
 .main-content-header{
@@ -196,4 +196,10 @@ h1{
     .main-content-header{
         text-align: center;
     }
+}
+
+.log{
+    font-size: xx-large;
+    font-weight: bolder;
+    
 }
