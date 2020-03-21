@@ -1,0 +1,78 @@
+$submenus: 3,4;
+$textColor: #f62e8b;
+$bgColor: #eee;
+$font: sans-serif;
+$black: #444;
+
+html {
+  font-size: 1.5vw;
+}
+body {
+  background-color: $bgColor;
+}
+nav {
+  display: flex;
+  text-transform: uppercase;
+  height: 3.5rem;
+  font-family: $font;
+  * {
+    display: inherit;
+  }
+  &>ul {
+    width: 100%;
+    justify-content: flex-start;  
+    &>li{
+      padding-right: 6rem;
+      &:first-child {
+        padding-left: 3rem;
+      }
+      &>ul {
+        padding-top: .7rem;
+        overflow: visible;
+          flex-wrap: no-wrap;
+        &>li {
+          padding: .2rem 0;
+          overflow: visible;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  ul {
+    padding-left: 0;
+    li {
+      font-size: 1rem;
+      &:hover {
+        &>a {
+          color: $black;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $textColor;
+      }
+    }
+  }
+  li,li>ul {
+    flex-direction: column;
+  } 
+  li>ul {
+    transition: opacity .5s ease-out;
+    opacity: 0;
+  }
+  
+}
+
+@each $submenu in $submenus {
+    $padding: 8-2*$submenu;
+    :not(li) {
+      &>ul>li:nth-child(#{$submenu}) {
+      padding-right: #{$padding}rem;
+      }
+    }
+    li:nth-child(#{$submenu}):hover {
+      &>ul {
+        opacity: 1;
+      }
+    } 
+  }
